@@ -126,7 +126,7 @@
 				.ss-scaffolding--regular-stroke > .row > [class^=" col-"] {
 					border-width:6px;
 					border-style:solid;
-					border-color:rgba(0,0,0,.15);
+					border-color:rgba(0,0,0,.12);
 				}
 				
 				/* Remove top border */
