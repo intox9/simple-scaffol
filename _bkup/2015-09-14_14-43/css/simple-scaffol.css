@@ -234,102 +234,6 @@
 /* 
 */
 
-/* 	## Responsive modifiers */
-/*		### Modifier for "with perimeter" scaffolding */
-		@media (max-width: 769px) {
-			
-			/* Basic shared styles */
-			.ss-scaffolding.ss-scaffolding--responsive-with-perimeter > .row > [class^="col-"], 
-			.ss-scaffolding.ss-scaffolding--responsive-with-perimeter > .row > [class^=" col-"] {
-				display:block;
-				float:left;
-				/*border-width:0;*/
-				width:100%;
-			}
-			
-			/* Fat-stroke: Add bottom and side strokes */
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--fat-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--fat-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--fat-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--fat-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-bottom-width:30px;
-				border-left-width:30px;
-				border-right-width:30px;
-				
-				border-top-width:0;
-			}
-			
-			/* Regular-stroke: Add bottom and side strokes */
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--regular-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--regular-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--regular-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--regular-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-bottom-width:6px;
-				border-left-width:6px;
-				border-right-width:6px;
-				
-				border-top-width:0;
-			}
-			
-			/* Pin-stroke: Add bottom and side strokes */
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--pin-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--pin-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--pin-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-with-perimeter.ss-scaffolding--pin-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-bottom-width:1px;
-				border-left-width:1px;
-				border-right-width:1px;
-				
-				border-top-width:0;
-			}
-			
-			
-			
-			
-		}
-	
-	
-/*		### Modifier for "without perimeter" scaffolding */
-		@media (max-width: 769px) {
-			
-			/* Basic shared styles */
-			.ss-scaffolding.ss-scaffolding--responsive-without-perimeter > .row > [class^="col-"], 
-			.ss-scaffolding.ss-scaffolding--responsive-without-perimeter > .row > [class^=" col-"] {
-				display:block;
-				float:left;
-				border-width:0;
-				width:100%;
-			}
-			
-			/* Fat-stroke: Add top strokes */
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--fat-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--fat-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--fat-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--fat-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-top-width:30px;
-			}
-			
-			/* Regular-stroke: Add top strokes */
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--regular-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--regular-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--regular-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--regular-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-top-width:6px;
-			}
-			
-			/* Pin-stroke: Add top strokes */
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--pin-stroke > .row > [class^="col-"] + [class^="col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--pin-stroke > .row > [class^=" col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--pin-stroke > .row > [class^="col-"] + [class^=" col-"], 
-			.ss-scaffolding--responsive-without-perimeter.ss-scaffolding--pin-stroke > .row > [class^=" col-"] + [class^="col-"] {
-				border-top-width:1px;
-			}
-		}
-
-
-
-
-
 /* # Warnings */
 /*	- IE has problems with applying 100% height to the scaffolding. 
 	  In particular layouts, this is less than desirable. 
@@ -340,7 +244,84 @@
 */
 
 
+/* # Responsive modifier for base ss-scaffolding component */
+@media (max-width: 769px) {
+	.ss-scaffolding.ss-scaffolding--responsive {
+		display:block;
+		float:left !important;
+		width:100%;
+	}
+}
+	@media (max-width: 769px) {
+		.ss-scaffolding.ss-scaffolding--responsive > .row,
+		.ss-scaffolding.ss-scaffolding--responsive > .row,
+		.ss-scaffolding.ss-scaffolding--responsive > tbody > .row,
+		.ss-scaffolding.ss-scaffolding--responsive > tbody > .row {
+			
+			display:block;
+			float:left !important;
+			width:100%;
+			
+			margin:0;
+		}
+	}			
+		@media (max-width: 769px) {
+			.ss-scaffolding.ss-scaffolding--responsive > .row > [class^="col-"],
+			.ss-scaffolding.ss-scaffolding--responsive > .row > [class^=" col-"],
+			.ss-scaffolding.ss-scaffolding--responsive > tbody > .row > [class^="col-"],
+			.ss-scaffolding.ss-scaffolding--responsive > tbody > .row > [class^=" col-"] {
+				
+				display:block;
+				
+				float:left !important;
+				width:100%;
+				
+				box-sizing:border-box;	
+				position:relative;
+				
+			}
+		}
+			
+/* # Pin-stroke responsive */
+@media (max-width: 769px) {
+	.ss-scaffolding.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^="col-"],
+	.ss-scaffolding.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^=" col-"],
+	.ss-scaffolding.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > tbody > .row > [class^="col-"],
+	.ss-scaffolding.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > tbody > .row > [class^=" col-"] {
+		border-top-width:1px;
+	}
 
+	.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^="col-"] + [class^="col-"], 
+	.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^="col-"] + [class^=" col-"], 
+	.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^=" col-"],
+	.ss-scaffolding--pin-stroke.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^="col-"] {
+		border-left-width:1px;
+	}
+}
+
+
+/* # Fat-stroke responsive*/
+@media (max-width: 769px) {
+	
+	.ss-scaffolding--fat-stroke.ss-scaffolding--responsive > .row > [class^="col-"] + [class^="col-"], 
+	.ss-scaffolding--fat-stroke.ss-scaffolding--responsive > .row > [class^="col-"] + [class^=" col-"], 
+	.ss-scaffolding--fat-stroke.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^=" col-"],
+	.ss-scaffolding--fat-stroke.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^="col-"] {
+		border-left-width:0px !important;
+	}
+}
+
+/* # Regular-stroke responsive*/
+@media (max-width: 769px) {	
+	/* Add left border */
+	.ss-scaffolding--removed-regular-perimeter.ss-scaffolding--responsive > .row > [class^="col-"] + [class^="col-"], 
+	.ss-scaffolding--removed-regular-perimeter.ss-scaffolding--responsive > .row > [class^="col-"] + [class^=" col-"], 
+	.ss-scaffolding--removed-regular-perimeter.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^=" col-"],
+	.ss-scaffolding--removed-regular-perimeter.ss-scaffolding--responsive > .row > [class^=" col-"] + [class^="col-"] {
+		border-left-width:0px;
+	}
+}
+	
 
 /* SIMPLE SCAFFOL: END
 ***********************************************************************************************************************/
